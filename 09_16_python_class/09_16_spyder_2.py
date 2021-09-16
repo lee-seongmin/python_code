@@ -64,3 +64,21 @@ for x in range(0,361):
     t.goto(scaledX,scaledY)
 
 t.penup()
+
+#%%
+
+import turtle as t
+T= t.Turtle()
+#import math
+import numpy as np
+
+t.shape("turtle")
+t.penup()
+t.goto(-100, 1 / (1+np.exp(-2*-100)))
+t.pendown()
+for x in range(-100,101):
+    y=1 / (1+np.exp(-2*x))
+    scaledX=x
+    scaledY=y*100
+    t.goto(scaledX,scaledY)
+t.penup()
