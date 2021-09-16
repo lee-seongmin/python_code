@@ -40,3 +40,27 @@ while(btn=='y' or 'Y'):
     btn=(str(input("계속하시겠습니까?")))
     
 #%%
+
+import turtle as t
+T= t.Turtle()
+import math
+
+#x1=math.radians()
+t.pendown()
+t.shape("turtle")
+for x in range(0,361):
+    y=math.sin(math.radians(x))
+    scaledX=x
+    scaledY=y*100
+    t.goto(scaledX,scaledY)
+t.penup()
+t.goto(0,math.cos(math.radians(0)))
+
+t.pendown()
+for x in range(0,361):
+    y=math.cos(math.radians(x))
+    scaledX=x
+    scaledY=y*100
+    t.goto(scaledX,scaledY)
+
+t.penup()
