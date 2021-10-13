@@ -30,4 +30,6 @@ for i in range(1,100):
     if(i%2==0):
         tp+=(i,)
 print(tp)
+data = tuple(range(2,100,2))
+print(data)
 # %%
