@@ -1,0 +1,103 @@
+내장 함수
+abs(절대값)-> 허수도 가능
+
+char ->숫자 문자
+ord --> 문자 숫자
+
+complex -> 복소수
+
+dir -> 객체가 가지고있는 변수 함수 보여줌
+
+eval -> 계산
+
+exac ->
+
+float - 문자를 부동소수점
+
+max 최대값
+
+min 최소값
+
+sorted-> 오름차순 -> 함수 -> 결과만 변환 시켜줘
+sort -> 오름차순 -> 메소드-> 리스트 자제가 바뀐다
+중요하다 꼭 알아주자
+
+
+내림차순  -> reverse = ture
+
+
+object -> 상속 
+가장 상위 클라스
+
+repr ->클라스 속 str과 비슷하다 
+
+이터레이터
+
+루프를 돌수있는 여러가지의 객체
+
+--iter-- -> 객체 자신을 반환한다
+
+--next--   -> 다음 반복을 위한 값을 반환한다. 값이 없을경우 Stoplteration 을 반환한다
+
+
+제네레이터 -> yield의 값을 사용함
+
+closure -> 함수에 의하여 반환되는 함수이다.
+
+피보나치 수열
+
+class Fib:
+    def __init__(self,a =1, b=0,maxVal =50):
+        self.a = a
+        self.b = b
+        self.maxVal = maxVal
+    def __iter__(self):
+        return self
+    
+    def __next__(self):
+        n= self.a + self.b
+        if n>self.maxVal:
+            raise StopIteration()
+        self.a =self.b
+        self.b = n
+        return n
+    
+    
+for i in Fib():
+    print(i,end="")
+    
+
+
+오버로딩 연산자 
+
+
+책 페이지 합치는 코드
+
+class Book:
+    def __init__(self,name,page):
+        self.name = name
+        self.page = page
+        
+    def __add__(self,other):
+        n = ??? -> 책보고 한번 해보기
+        
+    def __repr__(self):
+        return self.name
+
+
+-> 추가 요망
+
+
+모듈을 직접 만들어 사용가능
+
+copy  모듈
+
+keyword 모듈
+
+time 모듈 -> 중요해
+
+time.time -> 초 
+
+calender 모듈
+
+조ㅑ
